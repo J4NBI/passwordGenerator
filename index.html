@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Passwort Generator</title>
+</head>
+<body>
+    <div class="password-card slideIn">
+        <h1>Generate a <br><span class="text-random">random password</span></h1>
+        <p>Never use insecure passwords again!</p>
+        <button id="generate-el">Generate passwords</button>
+        <div>
+            <select id="chars-el" name="number">
+            <!-- Die Optionen werden automatisch generiert -->
+            <!-- Manuell geschrieben: -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15" selected>15</option>
+            </select>
+            <label for="chars">How many Characters</label>
+        </div>
+        <div class="special">
+            <button class="" id="special-el" onclick="toggleSpecial()" class="green">Special Characters</button>
+            <div id="onOff-el" class="green">on</div>
+        </div>
+        <div id="line-el" class="line disabled"></div>
+        <div class="passwords-div">
+            <div>
+                <button id="password-1" class="disabled"></button>
+                <p id="copied1-el"></p>
+            </div>
+            <div><button id="password-2" class="disabled"></button>
+                <p id="copied2-el"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js" defer></script>
+</body>
+</html>
