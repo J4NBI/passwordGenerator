@@ -82,12 +82,6 @@ generateEl.addEventListener('click', function(){
 
 password1.addEventListener("click", () => {
     navigator.clipboard.writeText(password1.textContent)
-      .then(() => {
-        alert("Copied to clipboard!");
-      })
-      .catch(err => {
-        console.error("Failed to copy: ", err);
-      });
       copied1El.classList.remove("disabled")
       copied1El.classList.add("slideIn");
       copied1El.textContent = "copied!"
@@ -97,12 +91,7 @@ password1.addEventListener("click", () => {
 
 password2.addEventListener("click", () => {
     navigator.clipboard.writeText(password2.textContent)
-      .then(() => {
-        console.log("Copied to clipboard!");
-      })
-      .catch(err => {
-        console.log("Failed to copy: ", err);
-      });
+  
       copied2El.classList.remove("disabled")
       copied2El.classList.add("slideIn")
       copied2El.textContent = "copied!"
