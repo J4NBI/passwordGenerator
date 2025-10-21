@@ -51,6 +51,12 @@ generateEl.addEventListener('click', function(){
     password2.classList.remove("disabled");
     lineEl.classList.remove("disabled");
 
+    copied1El.classList.add("disabled")
+    copied2El.classList.add("disabled")
+    copied1El.classList.remove("slideIn");
+    copied2El.classList.remove("slideIn");
+
+
     for (let i = 0; i < charlength; i++){
         if (hasSpecialChars){
             firstPasswort.push(zeichen[Math.floor(Math.random() * zeichen.length)])
@@ -82,8 +88,10 @@ password1.addEventListener("click", () => {
       .catch(err => {
         console.error("Failed to copy: ", err);
       });
-      copied1El.classList("slideIn");
+      copied1El.classList.remove("disabled")
+      copied1El.classList.add("slideIn");
       copied1El.textContent = "copied!"
+      console.log(copied1El)
       
 })
 
@@ -95,5 +103,7 @@ password2.addEventListener("click", () => {
       .catch(err => {
         console.log("Failed to copy: ", err);
       });
+      copied2El.classList.remove("disabled")
+      copied2El.classList.add("slideIn")
       copied2El.textContent = "copied!"
 })
